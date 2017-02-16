@@ -31,8 +31,8 @@ describe('someObjsContainProp', () => {
     ];
 
     it('checks whether some objects in an array of objects contain some property', () => {
-      expect(code.someObjsContainProp(testArr, 'middle')).to.equal(true);
-      expect(code.someObjsContainProp(testArr2, 'middle')).to.equal(false);
+      expect(code.someObjsContainProp(testArr, 'middle')).to.be.true;
+      expect(code.someObjsContainProp(testArr2, 'middle')).to.be.false;
     });
 
     it('uses the correct higher order function', () => {
@@ -67,8 +67,8 @@ describe('objContainsProp', () => {
   ];
 
   it('checks whether each object in an array of objects contains some property', () => {
-    expect(code.objContainsProp(testArr, 'middle')).to.equal(false);
-    expect(code.objContainsProp(testArr2, 'middle')).to.equal(true);
+    expect(code.objContainsProp(testArr, 'middle')).to.be.false;
+    expect(code.objContainsProp(testArr2, 'middle')).to.be.true;
   });
 
   it('uses the correct higher order function', () => {
