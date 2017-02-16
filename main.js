@@ -3,38 +3,39 @@
 module.exports = {
 
   //take an array of arrays with firstname, lastname elements and transform each into an object with firstname, lastname key;
-  map: (arr) => {
-    let mapped = [];
+  convertNameToObject: (arr) => {
+    let nameObj = [];
     for(var i = 0; i < arr.length; i++){
       let obj = {};
       obj.first = arr[i][0];
       obj.last = arr[i][1];
-      mapped.push(obj);
+      nameObj.push(obj);
     }
-    return mapped;
+    return nameObj;
   },
 
 
   //filter elements in an array that match search criteria
-  filter: (arr, str) => {
-    let filtered = [];
+  stringMatch: (arr, str) => {
+    let matches = [];
     for(var i = 0; i < arr.length; i++){
       if (arr[i].includes(str)){
-        filtered.push(arr[i]);
+        matches.push(arr[i]);
       }
     }
-    return filtered;
+    return matches;
   },
 
-  reduce: (arr, base) => {
+  sum: (arr, base) => {
+    let sum = base;
     for (var i = 0; i < arr.length; i++){
-      base += arr[i];
+      sum += arr[i];
     }
-    return base;
+    return sum;
   },
 
-  //checks whether each object in an array of objects contains a 'middle' property
-  every: (arr, prop) => {
+  //checks whether each object in an array of objects contains some property
+  objContainsProp: (arr, prop) => {
     for (var i = 0; i < arr.length; i++){
       if(!arr[i].hasOwnProperty(prop)){
         return false;
@@ -43,8 +44,8 @@ module.exports = {
     return true;
   },
 
-  //checks where some objects in an array contain a 'middle' property
-  some: (arr, prop) => {
+  //checks where some objects in an array contains some property
+  someObjsContainProp: (arr, prop) => {
     for(var i = 0; i < arr.length; i++){
       if(arr[i].hasOwnProperty(prop)){
         return true;
