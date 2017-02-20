@@ -80,7 +80,7 @@ describe('stringMatch', () => {
 
   let testArr = ['apples', 'bananas', 'grapes', 'oranges', 'watermelon'];
 
-  it('stringMatchs elements in an array that match search criteria', () => {
+  it('finds elements in an array that match search criteria', () => {
     expect(code.stringMatch(testArr, 'w')).to.deep.equal(['watermelon']);
     expect(code.stringMatch(testArr, 'an')).to.deep.equal(['bananas', 'oranges']);
   });
