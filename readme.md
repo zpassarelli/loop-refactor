@@ -11,4 +11,6 @@ Choose from the following HOFs:
 
 Each of these HOFs should be used exactly once in the refactor.
 
-Run the command 'mocha' to test. The tests check for expected outputs and the absence of for-loops. Do not submit your solutions until all tests are passing.
+Before refactoring, examine the existing code and tests for each function in order to understand the expected inputs and outputs.
+
+Run the command ```mocha``` to test. The tests check for expected outputs and the absence of for-loops. Do not submit your solutions until all tests are passing.
