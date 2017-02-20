@@ -13,7 +13,7 @@ describe('sum', () => {
     expect(code.sum(testArr2, 5)).to.equal(35);
   });
 
-  it('uses the correct higher order function', () => {
+  it('uses a higher order function', () => {
     expect(code.sum.toString()).to.not.include('for');
   });
 });
@@ -35,7 +35,7 @@ describe('someObjsContainProp', () => {
       expect(code.someObjsContainProp(testArr2, 'middle')).to.be.false;
     });
 
-    it('uses the correct higher order function', () => {
+    it('uses a higher order function', () => {
       expect(code.someObjsContainProp.toString()).to.not.include('for');
     });
 });
@@ -48,7 +48,7 @@ describe('convertNameArrayToObject', () => {
     expect(code.convertNameArrayToObject(testArr)).to.deep.equal([{first: 'Jennie', last: 'Zinko'}, {first: 'Amy', last: 'Marzulla'}, {first: 'Dakota', last: 'Jones'}]);
   });
 
-  it('uses the correct higher order function', () => {
+  it('uses a higher order function', () => {
     expect(code.convertNameArrayToObject.toString()).to.not.include('for');
     expect(code.convertNameArrayToObject.toString()).to.not.include('push');
   });
@@ -71,7 +71,7 @@ describe('objContainsProp', () => {
     expect(code.objContainsProp(testArr2, 'middle')).to.be.true;
   });
 
-  it('uses the correct higher order function', () => {
+  it('uses a higher order function', () => {
     expect(code.objContainsProp.toString()).to.not.include('for');
   });
 });
@@ -85,7 +85,7 @@ describe('stringMatch', () => {
     expect(code.stringMatch(testArr, 'an')).to.deep.equal(['bananas', 'oranges']);
   });
 
-  it('uses the correct higher order function', () => {
+  it('uses a higher order function', () => {
     expect(code.stringMatch.toString()).to.not.include('for');
     expect(code.stringMatch.toString()).to.not.include('push');
   });
